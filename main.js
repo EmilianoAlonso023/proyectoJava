@@ -45,75 +45,34 @@ boton.addEventListener("mouseover",()=>{
     console.log("busqueda");
 })
 
+function login(){
+    var user, pass;
 
+    user = document.getElementById("usuario").value;
+    pass = document.getElementById("contraseña").value;
 
-localStorage.setItem('llave', 'valor');
-//sessionStorage.setItem('llave', 'otroValor');
+    if(user =="Emiliano" && pass == "1234"){
 
-const item = localStorage.getItem('llave');
-console.log(item);
+        window.location= "pagina.html";
 
-document.write(item);
+    }
 
-localStorage.removeItem('llave');
-
-
-const formularioUsuario = document.querySelector('#formularioUsuario');
-const nombreFormulario = document.querySelector('#nombre');
-const apellidoFormulario = document.querySelector('#apellido');
-const saludoUsuario = document.querySelector('#saludoUsuario');
-const logout = document.querySelector('#logout');
-
-let nombre;
-let apellido;
-let nombreStorage = localStorage.getItem('nombre');
-let apellidoStorage = localStorage.getItem('apellido');
-
-const imprimirSaludo = () => {
-    saludoUsuario = `hola ${nombre} ${apellido}`;
-    formularioUsuario.style.display = 'none';
 }
 
-
-const ejecutarFormulario = () => {
-    nombre = nombreFormulario.value; 
-    apellido = apellidoFormulario.value; 
-    localStorage.setItem('nombre', nombre);
-    localStorage.setItem('apellido', apellido);
-    imprimirSaludo();
-}
-
-const verificarStorage = () => {
-    if (nombreStorage != null && apellidoStorage !== null) {
-    nombre = nombreStorage;
-    apellido = apellidoStorage;
-
-    imprimirSaludo();
-} else {
-    formularioUsuario.addEventListener('sumbit', (e) => {
-    e.preventDefault();
-    ejecutarFormulario();
-    nombreFormulario.value = '';
-    apellidoFormulario.value = '';
-    });
-}
-}
-const cerrarSesion = () => {
-    localStorage.clear();
-    revertirSaludo();
-}
-
-verificarStorage();
-
+localStorage.setItem('valorTexto', 'texto');
+localStorage.setItem('valorNumero', 100000);
+localStorage.setItem('valorBoolean', true);
 
 const objeto = {
-    usuario: 'emiliano', edad: 33, monto: 1000
+    usuario: 'jorege', 
+    edad: 41, 
+    monto: 100,
 };
-localStorage.setItem('objeto',JSON.stringify( objeto));
-saludoUsuario.innerHTML = objeto;
 
-const objetoSorage = JSON.parse(localStorage.getItem('objeto'));
-const objetoStorageSinParse = localStorage.getItem('objeto');
+localStorage.setItem('parrafo', JSON.stringify,(parrafo));
 
-console.log(objetoStorageSinParse);
-console.log(objetoSorage);
+parrafo.innerHTML = objeto;
+
+const objetoStorage = JSON.parse(localStorage.getItem('parrafo'));
+
+console.log(objetoStorage);

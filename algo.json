@@ -1,5 +1,12 @@
-{
+[
+    {
     "usuario": "emiliano",
     "edad": 33,
     "booleano": true
+},
+{
+    "usuario": "ezequiel",
+    "edad": 32,
+    "booleano": false
 }
+]
