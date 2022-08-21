@@ -4,7 +4,7 @@ function valorProducto(precio, descuento) {
     return valorFinal 
     }
     
-    
+    /* 
     function productoNuevo() {
         let precioLista = parseInt(prompt("cual es el precio de lista?"));
         let descuento = parseInt(prompt("cual es el descuento?"));
@@ -13,7 +13,7 @@ function valorProducto(precio, descuento) {
     }
     
     console.log(productoNuevo());
-
+ */
 
     const monitor1 = {
         marca: "Samsung",
@@ -57,7 +57,7 @@ console.log(listaTecno);
 
 console.log(listaTecno.join(" - "));
 
-let listaPrecios = [
+/* let listaPrecios = [
     {nombre: "monitores", precio: 50000},
     {nombre:"pc", precio: 100000},
     {nombre: "notebooks", precio: 150000},
@@ -65,9 +65,9 @@ let listaPrecios = [
     {nombre: "ssd", precio: 30000},
     {nombre: "mouse", precio: 3000},
     {nombre: "auriculaes", precio: 5000},
-];
+]; */
 
-let search = prompt("que producto buscas?");
+/* let search = prompt("que producto buscas?");
 let buscar = listaPrecios.find(el => el.nombre == search);
 if (buscar != undefined) {
 alert(`el objeto buscado es ${buscar.nombre} y su precio es ${buscar.precio}`);
@@ -77,11 +77,15 @@ alert(`el objeto buscado es ${buscar.nombre} y su precio es ${buscar.precio}`);
 
 let buscaPrecio = listaPrecios.filter(el => el.precio > 40000 );
 console.log(buscaPrecio);
+ */
 
 
+let titulo = document.getElementById("titulo");
+console.log(titulo);
 
-
-
+ /* let productos = document.querySelectorAll("ul");
+console.log(productos);
+  */
 
 
 
@@ -121,19 +125,25 @@ Toastify({
   
 
   const boton = document.querySelector("#btn");
+  const botonPrecios =document.querySelector("#btn");
 const contenedor = document.querySelector("#fetch");
 
 
 const obtenerDatos = ()=>{
     fetch("./empleados.json")
+    fetch("./precios.json")
     .then(response => response.json())
-    .then(result => console.log(result))
-    
-    
+    .then(result => console.log(result))  
     }
-
-
-
 boton.onclick = ()=>{
     obtenerDatos();
 }
+
+/* const precioLista = ()=>{
+    fetch("./precios.json")
+    .then(response => responde.json())
+    .then(result => console.log(result))
+}
+boton.onclick = ()=>{
+    precioLista();
+} */

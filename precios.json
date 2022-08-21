@@ -1,0 +1,9 @@
+[
+    {"nombre": "monitores", "precio": 50000},
+    {"nombre":"pc", "precio": 100000},
+    {"nombre": "notebooks", "precio": 150000},
+    {"nombre": "teclados", "precio": 3000},
+    {"nombre": "ssd", "precio": 30000},
+    {"nombre": "mouse", "precio": 3000},
+    {"nombre": "auriculaes", "precio": 5000}
+]
