@@ -80,12 +80,12 @@ console.log(buscaPrecio);
  */
 
 
-let titulo = document.getElementById("titulo");
-console.log(titulo);
+/* let titulo = document.getElementById("titulo");
+console.log(titulo); */
 
- /* let productos = document.querySelectorAll("ul");
+let productos = document.getElementsByClassName("productos");
 console.log(productos);
-  */
+  
 
 
 
@@ -123,15 +123,12 @@ Toastify({
   }).showToast();
 
   
-
   const boton = document.querySelector("#btn");
-  const botonPrecios =document.querySelector("#btn");
 const contenedor = document.querySelector("#fetch");
 
 
 const obtenerDatos = ()=>{
     fetch("./empleados.json")
-    fetch("./precios.json")
     .then(response => response.json())
     .then(result => console.log(result))  
     }
@@ -139,11 +136,9 @@ boton.onclick = ()=>{
     obtenerDatos();
 }
 
-/* const precioLista = ()=>{
+const datosPrecios = ()=>{
     fetch("./precios.json")
-    .then(response => responde.json())
+    .then(response => response.json())
     .then(result => console.log(result))
 }
-boton.onclick = ()=>{
-    precioLista();
-} */
+    datosPrecios()
