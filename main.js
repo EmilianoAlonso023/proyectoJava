@@ -1,19 +1,8 @@
-function valorProducto(precio, descuento) {
+/* function valorReparacion(precio, descuento) {
     let valorDescuento = precio * descuento /100;
     let valorFinal = precio - valorDescuento;
     return valorFinal 
-    }
-    
-    /* 
-    function productoNuevo() {
-        let precioLista = parseInt(prompt("cual es el precio de lista?"));
-        let descuento = parseInt(prompt("cual es el descuento?"));
-        alert(`el precio final es de ${valorProducto(precioLista, descuento)}`);
-        return valorProducto(precioLista, descuento);
-    }
-    
-    console.log(productoNuevo());
- */
+    } */
 
     const monitor1 = {
         marca: "Samsung",
@@ -21,18 +10,18 @@ function valorProducto(precio, descuento) {
         modelo: "b2330",
         pulgada: 24,
         hdmi: "si",
-        stock: true
+        reparado: true
     }
 
     console.log(monitor1);
 
-    function Monitores (marca, tipo, modelo, pulgada, hdmi, stock) {
+    function Monitores (marca, tipo, modelo, pulgada, hdmi, reparado) {
         this.marca = marca; 
         this.tipo = tipo;
         this.modelo = modelo;
         this.pulgada = pulgada;
         this.hdmi = hdmi;
-        this.stock = stock;
+        this.reparado = this.reparado;
     }
 
     const lg = new Monitores("lg","led","a4240",23,"si", true);
@@ -40,7 +29,7 @@ function valorProducto(precio, descuento) {
     console.log(lg);
     console.log(sony);
 
-let lista = ["productos1", "productos2", "stock", "precio", false,{nombre: "emiliano", apellido: "alonso,"}];
+let lista = ["reparaciones1", "reparaciones2", "stock", "reparado", false,{nombre: "emiliano", apellido: "alonso,"}];
 
 console.log(lista);
 
@@ -50,51 +39,15 @@ for(let i = 0; i < lista.length; i ++) {
 console.log(lista[i]);
 }
 
-let listaTecno = ["monitores", "pc", "notebooks", "teclados", "ssd", "mouse"];
-listaTecno.push("auriculaes");
+let listaTecno = ["monitores", "pc", "notebooks", "PS", "xbox"];
+listaTecno.push("repuestos");
 console.log(listaTecno);
 
 
 console.log(listaTecno.join(" - "));
 
-/* let listaPrecios = [
-    {nombre: "monitores", precio: 50000},
-    {nombre:"pc", precio: 100000},
-    {nombre: "notebooks", precio: 150000},
-    {nombre: "teclados", precio: 3000},
-    {nombre: "ssd", precio: 30000},
-    {nombre: "mouse", precio: 3000},
-    {nombre: "auriculaes", precio: 5000},
-]; */
-
-/* let search = prompt("que producto buscas?");
-let buscar = listaPrecios.find(el => el.nombre == search);
-if (buscar != undefined) {
-alert(`el objeto buscado es ${buscar.nombre} y su precio es ${buscar.precio}`);
-} else {
-    alert("ese producto no existe")
-}
-
-let buscaPrecio = listaPrecios.filter(el => el.precio > 40000 );
-console.log(buscaPrecio);
- */
-
-
-/* let titulo = document.getElementById("titulo");
-console.log(titulo); */
-
-let productos = document.getElementsByClassName("productos");
-console.log(productos);
-  
-
-
-
-
-
-
-
-
-
+let reparaciones = document.getElementsByClassName("reparaciones");
+console.log(reparaciones);
 
 
 Toastify({
@@ -114,9 +67,11 @@ Toastify({
 
 
   Toastify({
-    text: "25% oof del 8 de agosto al 12 de Agosto en nuestro catalogo de whatsapp",
+    text: "Atencion rapida por WhatsApp, hace click aca!",
     destination: "https://web.whatsapp.com/",
     className: "info",
+    gravity: "top",
+    duration: 5000,
     style: {
       background: "linear-gradient(to right, #00b09b, #96c93d)",
     }

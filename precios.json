@@ -1,9 +1,8 @@
 [
-    {"nombre": "monitores", "precio": 50000},
-    {"nombre":"pc", "precio": 100000},
-    {"nombre": "notebooks", "precio": 150000},
-    {"nombre": "teclados", "precio": 3000},
-    {"nombre": "ssd", "precio": 30000},
-    {"nombre": "mouse", "precio": 3000},
-    {"nombre": "auriculaes", "precio": 5000}
+    {"nombre": "monitores", "falla":"display", "precio": 25000},
+    {"nombre":"pc", "falla": "formateo + memoria ram", "precio": 15000},
+    {"nombre": "PS", "falla": "display + cambio ssd", "precio": 50000},
+    {"nombre": "Xobx", "falla": "cambio de pasta termica", "precio": 20000},
+    {"nombre": "notebooks", "falla": "falla por insectos dentro + limpieza", "precio": 45000}
+    
 ]
